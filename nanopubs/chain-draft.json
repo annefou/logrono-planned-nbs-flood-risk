@@ -4,7 +4,7 @@
   "chain_shape": "pico",
   "source": {
     "repository": "https://github.com/annefou/logrono-planned-nbs-flood-risk",
-    "commit": "ba11d63cf4b21924a4bd583ae7ddef47869448a4",
+    "commit": "c2883f43fb3af0201406d20b9415618f6758f28d",
     "figure": "figures/main_result.png"
   },
   "steps": [
@@ -162,6 +162,7 @@
       "prefill": {
         "outcome": "logrono-planned-nbs-flood-risk-outcome",
         "label": "REACHOUT's planned nature-based solutions reduce residents at pluvial flood risk in Logroño by less than 4 %, only for frequent storms",
+        "repo": "https://doi.org/10.5281/zenodo.23300575",
         "date": "2026-10-11",
         "validationStatus": "https://w3id.org/sciencelive/o/terms/Validated",
         "conclusion": "Validated. In Logroño (Spain), the nature-based solutions of REACHOUT's planned scenario reduce the number of residents in buildings at pluvial flood risk only a little and only for frequent storms: by at most 1.7 % without the extra ponds and 3.7 % with them, and not at all during the 100- and 200-year storms, under present or future rainfall. The planned scenario without ponds stops reducing risk after the 10-year storm, the version with ponds after the 50-year storm. Neither ever increases the number of residents at risk. The measures change the flood maps over a few hectares in the south of the city, while future rainfall adds tens to over a hundred hectares of deeper water (see the future-rainfall chain), so in this model the planned measures do not offset climate change. This describes the measures as REACHOUT modelled them, as infiltration and storage in a fill-and-spill model without sewers; it is not an assessment of the measures as they may be built.",
@@ -172,6 +173,7 @@
       "provenance": {
         "outcome": "nanopubs/drafts/05_outcome.md",
         "label": "nanopubs/drafts/05_outcome.md",
+        "repo": "CITATION.cff",
         "date": "CITATION.cff",
         "validationStatus": "nanopubs/drafts/05_outcome.md",
         "conclusion": "nanopubs/drafts/05_outcome.md",
