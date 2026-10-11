@@ -1,5 +1,5 @@
 cff-version: 1.2.0
-title: "logrono-planned-nbs-flood-risk"
+title: "REACHOUT's planned nature-based solutions and building-level pluvial flood risk in Logroño"
 message: "If you use this software, please cite it as below."
 type: software
 authors:
@@ -11,6 +11,12 @@ repository-code: "https://github.com/annefou/logrono-planned-nbs-flood-risk"
 license: MIT
 version: "0.1.0"
 date-released: "2026-10-11"
+abstract: >-
+  Do the nature-based solutions of REACHOUT's planned scenario for Logroño (Spain) reduce building-level
+  pluvial flood risk? Using the result tables of the Logroño flood-adaptation scenarios analysis (v0.1.0) and the
+  REACHOUT flood maps, this repository compares both versions of the planned scenario (with and without extra ponds)
+  with the current green cover under present and future design rainfall, for return periods of 2 to 200 years.
+  It holds one FORRT nanopublication chain (question-rooted) and its headline figure.
 # Identifiers below are recorded AUTOMATICALLY on each release by
 # .github/workflows/release-identifiers.yml — don't fill them in by hand.
 #
@@ -32,8 +38,12 @@ identifiers:
   #   - type: doi   value: <version DOI>  "Version DOI for vX.Y.Z — pins this exact release; cite this from nanopubs"
   #   - type: swh   value: swh:1:rev:<commit>;origin=<repo>  "Software Heritage ID of the vX.Y.Z source tree"
 keywords:
-  - replication
-  - reproducibility
+  - pluvial flooding
+  - flood risk
+  - nature-based solutions
+  - green infrastructure
+  - climate change adaptation
+  - Logroño
   - FORRT
   - nanopublication
   - Science-Live
@@ -43,18 +53,57 @@ references:
     authors:
       - family-names: "Vogelbacher"
         given-names: "Anastasia"
+      - family-names: "von Szombathely"
+        given-names: "Malte"
+      - family-names: "Lennartz"
+        given-names: "Marc"
+      - family-names: "Poschlod"
+        given-names: "Benjamin"
+      - family-names: "Sillmann"
+        given-names: "Jana"
+    journal: "Natural Hazards and Earth System Sciences"
+    volume: 26
+    start: 2765
+    end: 2783
     year: "2026"
     doi: "10.5194/nhess-26-2765-2026"
-  # Prior FORRT chain this replication extends or qualifies. The URI below
-  # is the canonical persistent pointer to the prior constellation; the
-  # imported summary itself (CHAIN_SUMMARY.md, constellation.json, cached
-  # TriG) is regenerated on demand via `/import-from-nanopub <URL>` and
-  # lives in the gitignored `nanopubs/imported/` directory.
-  #
-  # If your replication does NOT extend a prior chain, init-template
-  # removes this entry. If it does, init-template substitutes the URI
-  # and description below from your responses.
+  - type: software
+    title: "Building-level pluvial flood risk in Logroño under future rainfall and nature-based solution scenarios"
+    authors:
+      - family-names: "Fouilloux"
+        given-names: "Anne"
+    version: "v0.1.0"
+    year: "2026"
+    doi: "10.5281/zenodo.23298913"
+    notes: "The shared analysis whose result tables this repository uses (notebooks/01_data_download.py)."
+  - type: software
+    title: "Logroño replication of Vogelbacher et al. (2026): building-level pluvial flood risk with open data, tested against recorded flood impacts"
+    authors:
+      - family-names: "Fouilloux"
+        given-names: "Anne"
+    version: "v0.1.1"
+    year: "2026"
+    doi: "10.5281/zenodo.23285198"
+  - type: software
+    title: "building-climate-risk: building-level climate risk (flood, and other hazards)"
+    authors:
+      - family-names: "Fouilloux"
+        given-names: "Anne"
+    version: "v0.2.1"
+    year: "2026"
+    doi: "10.5281/zenodo.23285504"
+  - type: dataset
+    title: "Urban pluvial flood maps under different green cover scenarios"
+    authors:
+      - family-names: "Staccione"
+        given-names: "Andrea"
+      - family-names: "Pal"
+        given-names: "Jeremy S."
+    year: "2024"
+    doi: "10.5281/zenodo.14035876"
+  # The FORRT chain of the Logroño replication, on which this work builds
+  # (persistent pointer; regenerate the local summary with /import-from-nanopub <URL>).
   - type: generic
     title: "Logroño pluvial-flood replication of Vogelbacher et al. (2026) — CiTO citation (partially supported; qualifies the paper, extends the Hamburg reproduction)"
     url: "https://w3id.org/sciencelive/np/RAoFYugT7OVk5eoHuxKCO9HeqA08jMfSn7TeUxwZcbezE"
-    notes: "Apex CiTO Citation of the prior FORRT chain this replication extends. Re-run `/import-from-nanopub <URL>` to repopulate nanopubs/imported/ locally."
+    notes: "Apex CiTO citation of the replication chain this work builds on. Study area: geographic coverage nanopub https://w3id.org/sciencelive/np/RAzds1z9t2ac7XFvx_Hsv18__p5nUTNA0NHIsskSyLVPQ"

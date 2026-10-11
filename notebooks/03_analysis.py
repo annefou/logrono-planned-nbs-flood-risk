@@ -70,10 +70,14 @@ print(reduction[reduction["risk"] == "either"].pivot_table(index=["land_cover", 
 
 # %% [markdown]
 # ## 2. Residential buildings whose hazard changes at all
+#
+# The analysis compares every map with the **present-day** current-cover map of the same
+# return period, so for future rainfall this count mixes the measures with the heavier
+# rain; only present rainfall isolates the measures.
 
 # %%
 changed = pd.read_csv(CLEAN / "hazard_changed.csv")
-changed = changed[changed["land_cover"].isin(NBS)].pivot_table(
+changed = changed[changed["land_cover"].isin(NBS) & (changed["climate"] == "present")].pivot_table(
     index=["land_cover", "climate", "risk"], columns="rp", values="buildings_hazard_changed")
 changed.to_csv(RESULTS / "buildings_hazard_changed.csv")
 print(changed.to_string())
@@ -81,16 +85,17 @@ print(changed.to_string())
 # %% [markdown]
 # ## 3. The flood maps: cells and stored water against the current green cover
 #
-# Inside the area modelled by every scenario, water bodies included; 2 m cells.
+# Inside the area modelled by every scenario, water bodies included; 2 m cells. As in §2,
+# only present rainfall isolates the measures.
 
 # %%
 cells = pd.read_csv(CLEAN / "cells.csv")
-cells = cells[cells["land_cover"].isin(NBS)][["land_cover", "climate", "rp", "cells_ge30", "cells_ge30_baseline",
+cells = cells[cells["land_cover"].isin(NBS) & (cells["climate"] == "present")][["land_cover", "climate", "rp", "cells_ge30", "cells_ge30_baseline",
                                               "cells_shallower", "cells_deeper", "volume_change_m3"]]
 cells["area_shallower_ha"] = cells["cells_shallower"] * 4 / 1e4
 cells["area_deeper_ha"] = cells["cells_deeper"] * 4 / 1e4
 cells.to_csv(RESULTS / "flood_map_changes.csv", index=False)
-print(cells[cells["climate"] == "present"].round(1).to_string(index=False))
+print(cells.round(1).to_string(index=False))
 
 # %% [markdown]
 # ## 4. Recorded impact places

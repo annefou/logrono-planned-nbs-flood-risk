@@ -64,7 +64,7 @@ Residential buildings and their residents in Logroño (La Rioja, Spain), a mid-s
 The intervention or exposure being examined. Discipline-level concept.
 
 ```
-The nature-based solutions planned for the city through a co-design process: bioswales and ponds, a green corridor, and additional small ponds and rain gardens.
+The nature-based solutions of REACHOUT's planned scenario for the city, as defined in its co-design process: bioswales and ponds and a green corridor in the southern part of the city, with and without additional small ponds and rain gardens.
 ```
 
 <!-- field: comparatorGroupDescription -->

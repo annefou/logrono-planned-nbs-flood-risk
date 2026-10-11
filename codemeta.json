@@ -1,8 +1,8 @@
 {
   "@context": "https://doi.org/10.5063/schema/codemeta-2.0",
   "@type": "SoftwareSourceCode",
-  "name": "logrono-planned-nbs-flood-risk",
-  "description": "Do the nature-based solutions of REACHOUT's planned scenario for Logroño (Spain) reduce building-level pluvial flood risk? One FORRT chain, built on the Logroño flood-adaptation scenarios analysis.",
+  "name": "REACHOUT's planned nature-based solutions and building-level pluvial flood risk in Logroño",
+  "description": "Do the nature-based solutions of REACHOUT's planned scenario for Logroño (Spain) reduce building-level pluvial flood risk? Using the result tables of the Logroño flood-adaptation scenarios analysis (v0.1.0) and the REACHOUT flood maps, this repository compares both versions of the planned scenario (with and without extra ponds) with the current green cover under present and future design rainfall, for return periods of 2 to 200 years. It holds one FORRT nanopublication chain (question-rooted) and its headline figure.",
   "version": "0.1.0",
   "dateCreated": "2026-10-11",
   "dateModified": "2026-10-11",
@@ -15,7 +15,10 @@
     "name": "Python",
     "version": "3.12"
   },
-  "operatingSystem": ["Linux", "macOS"],
+  "operatingSystem": [
+    "Linux",
+    "macOS"
+  ],
   "author": [
     {
       "@type": "Person",
@@ -29,8 +32,12 @@
     }
   ],
   "keywords": [
-    "replication",
-    "reproducibility",
+    "pluvial flooding",
+    "flood risk",
+    "nature-based solutions",
+    "green infrastructure",
+    "climate change adaptation",
+    "Logroño",
     "FORRT",
     "nanopublication",
     "Science-Live"
@@ -45,5 +52,24 @@
     "@type": "Organization",
     "name": "Science Live",
     "url": "https://platform.sciencelive4all.org"
-  }
+  },
+  "softwareRequirements": [
+    {
+      "@type": "SoftwareApplication",
+      "name": "logrono-flood-adaptation-scenarios",
+      "version": "0.1.0",
+      "identifier": "https://doi.org/10.5281/zenodo.23298913"
+    }
+  ],
+  "citation": [
+    {
+      "@id": "https://doi.org/10.5194/nhess-26-2765-2026"
+    },
+    {
+      "@id": "https://doi.org/10.5281/zenodo.23298913"
+    },
+    {
+      "@id": "https://doi.org/10.5281/zenodo.14035876"
+    }
+  ]
 }

@@ -34,7 +34,7 @@ Write the chosen type in the block below (a vocabulary label such as `cites as a
 > **Note:** `replicates` is NOT in the Science Live dropdown (despite existing in upstream CiTO). When citing a notebook/tutorial that was directly reused, use **`credits`** instead.
 
 ```
-
+uses method in
 ```
 
 ##### DOI or other URL of the cited work (text input)
@@ -49,7 +49,10 @@ If the Outcome cites methods papers, related replications, or upstream tools, ad
 
 One line per further citation, in this exact form (each becomes a pre-filled row):
 
-- _Type: ___ → URL: ___
+- Type: uses method in → URL: https://doi.org/10.5281/zenodo.23285504
+- Type: uses conclusions from → URL: https://w3id.org/sciencelive/np/RAzO2FoYqdwvPCDDkfVmf-SKOl2mUpsf_qZeje0i_LP_U
+- Type: uses data from → URL: https://doi.org/10.5281/zenodo.23298913
+- Type: uses data from → URL: https://doi.org/10.5281/zenodo.14035876
 
 ## Publication note
 

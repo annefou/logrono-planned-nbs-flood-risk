@@ -4,7 +4,8 @@
   "chain_shape": "pico",
   "source": {
     "repository": "https://github.com/annefou/logrono-planned-nbs-flood-risk",
-    "commit": "8bae40b12ae4f77e5ace188c7c1e5f875a2bc1ff"
+    "commit": "ba11d63cf4b21924a4bd583ae7ddef47869448a4",
+    "figure": "figures/main_result.png"
   },
   "steps": [
     {
@@ -17,7 +18,7 @@
         "description": "In Logroño (Spain), compared with the current green cover, do the nature-based solutions planned by the city (bioswales, ponds, rain gardens and a green corridor) reduce building-level pluvial flood hazard and the number of residents in buildings at risk, under present and future design rainfall?",
         "type": "https://w3id.org/sciencelive/o/terms/EffectivenessResearchQuestions",
         "populationDescription": "Residential buildings and their residents in Logroño (La Rioja, Spain), a mid-sized city exposed to pluvial flooding from short, intense rainstorms.",
-        "interventionGroupDescription": "The nature-based solutions planned for the city through a co-design process: bioswales and ponds, a green corridor, and additional small ponds and rain gardens.",
+        "interventionGroupDescription": "The nature-based solutions of REACHOUT's planned scenario for the city, as defined in its co-design process: bioswales and ponds and a green corridor in the southern part of the city, with and without additional small ponds and rain gardens.",
         "comparatorGroupDescription": "The city's current green cover, under the same design rainfall.",
         "outcomeGroupDescription": "Building-level pluvial flood hazard around each residential building, and building-level pluvial flood risk: the number of residents in buildings at risk."
       },
@@ -40,7 +41,40 @@
       "step": "02_aida",
       "template_key": "AIDA_SENTENCE",
       "template_uri": "https://w3id.org/np/RALmXhDw3rHcMveTgbv8VtWxijUHwnSqhCmtJFIPKWVaA",
-      "prefill": {},
+      "prefill": {
+        "aida": "The nature-based solutions of REACHOUT's planned scenario for Logroño reduce the number of residents in buildings at pluvial flood risk by less than 4 %, with no reduction during the 100- and 200-year storms.",
+        "topic": [
+          {
+            "uri": "http://www.wikidata.org/entity/Q2421934",
+            "label": "nature-based solutions"
+          },
+          {
+            "uri": "http://www.wikidata.org/entity/Q3427027",
+            "label": "green infrastructure"
+          },
+          {
+            "uri": "http://www.wikidata.org/entity/Q15909735",
+            "label": "urban flooding"
+          },
+          {
+            "uri": "http://www.wikidata.org/entity/Q2288778",
+            "label": "flood risk"
+          }
+        ],
+        "st3": [
+          {
+            "dataset": "https://doi.org/10.5281/zenodo.14035876"
+          },
+          {
+            "dataset": "https://doi.org/10.5281/zenodo.23298913"
+          }
+        ]
+      },
+      "provenance": {
+        "aida": "nanopubs/drafts/02_aida.md",
+        "topic": "nanopubs/drafts/02_aida.md + Wikidata",
+        "st3": "nanopubs/drafts/02_aida.md"
+      },
       "published_uri": null
     },
     {
@@ -48,11 +82,15 @@
       "template_key": "FORRT_CLAIM",
       "template_uri": "https://w3id.org/np/RAZWyM8D16ya3S1zhCvrG1f0iSpd9-8onVWp0FTvvX7LQ",
       "prefill": {
-        "claim": "annefou-logrono-planned-nbs-flood-risk-claim",
+        "claim": "logrono-planned-nbs-flood-risk-claim",
+        "label": "REACHOUT's planned nature-based solutions reduce residents at pluvial flood risk in Logroño by less than 4 %",
+        "forrtType": "https://w3id.org/sciencelive/o/terms/descriptive_pattern-FORRT-Claim",
         "source": "https://doi.org/10.5194/nhess-26-2765-2026"
       },
       "provenance": {
-        "claim": "derived (<org>-<repo>-<step>)",
+        "claim": "nanopubs/drafts/03_claim.md",
+        "label": "nanopubs/drafts/03_claim.md",
+        "forrtType": "nanopubs/drafts/03_claim.md",
         "source": "CITATION.cff"
       },
       "manual": [
@@ -65,10 +103,52 @@
       "template_key": "FORRT_REPLICATION",
       "template_uri": "https://w3id.org/np/RAuLEjPp-4dTvPwMkfHggTto1CgjIftiGRAgHlyeEonjQ",
       "prefill": {
-        "study": "annefou-logrono-planned-nbs-flood-risk-study"
+        "study": "logrono-planned-nbs-flood-risk-study",
+        "label": "Building-level pluvial flood risk in Logroño with REACHOUT's planned nature-based solutions",
+        "type": "https://w3id.org/sciencelive/o/terms/Replication-Study",
+        "scope": "Whether the nature-based solutions of REACHOUT's planned scenario for Logroño (Spain) reduce the number of residents living in buildings at pluvial flood risk, compared with the current green cover under the same rainfall. In scope: both versions of the planned scenario as published by REACHOUT (bioswales and ponds, about 29,850 m3, and a 5.3 km green corridor in the southern part of the city; and the same with additional small ponds and rain gardens, about 13,500 m3); every residential building inside the area modelled by all scenarios; the seven design storms (return periods of 2 to 200 years) under present and future (EURO-CORDEX median and 90th percentile) rainfall; both risk indices and either; which residential buildings' hazard changes at all; where the flood maps change; water on and around the places where recorded storms (2018-2024) caused flooding. Out of scope: the city's own plans as eventually built (only REACHOUT's scenario is modelled, and its layout is not published); measures modelled other than as REACHOUT modelled them; sewers; costs and co-benefits of the measures; population change; the validity of social vulnerability.",
+        "methodology": "Data and pipeline: the shared analysis Logroño flood-adaptation scenarios, release v0.1.0 (10.5281/zenodo.23298913), whose result tables this chain reads (its pipeline can be re-run from the same repository), and the REACHOUT archive itself for the map. Flood hazard: REACHOUT pluvial flood maps for Logroño (Staccione and Pal, 10.5281/zenodo.14035876), SaferRAIN, 2 m, 15-minute design storms, for the current green cover (Baseline), the planned scenario (NBSplanned) and the planned scenario with extra ponds (NBSplanned_plus); in SaferRAIN the measures change the infiltration layer and, for the ponds, the terrain. The comparison is restricted to cells modelled in every scenario. Flooded extents at depths of 30 to 100 cm are polygonised on the native grid, without resampling, and water bodies are removed. City inputs from the Logroño replication v0.1.1 (10.5281/zenodo.23285198). Risk: building-climate-risk v0.2.1 (10.5281/zenodo.23285504) with the paper's settings (TOPSIS with entropy; flood-sensitivity transform; hazard to well-being from a 2 m ring over depths of 30-100 cm; hazard to mobility from 5 / 15 / 30 m rings at 30 cm; risk = social vulnerability x exposure x hazard), social vulnerability ranked over all residential buildings of the city; a building is at risk when a risk index is above zero. Measures: residents and buildings at risk in each planned scenario against the current green cover, same rainfall, every return period and climate; residential buildings whose hazard changes, and flood-map cells getting shallower or deeper by more than 1 cm, under present rainfall (the analysis compares every map with the present-day current cover, so only present rainfall isolates the measures); mean water depth within 5 m of each recorded impact place.",
+        "deviation": "From the framework of Vogelbacher et al. (2026): (1) hazard model REACHOUT SaferRAIN (hydrostatic fill-and-spill with Green-Ampt infiltration, no sewer network, 15-minute storms) instead of VISDOM-SWMM; nature-based solutions enter only as REACHOUT modelled them (infiltration and, for the ponds, terrain), without the dynamics of storage, overflow or clogging; (2) census-section proxies for the vulnerability indicators; residents fixed at 2021; (3) comparison restricted to the area modelled by every scenario: 157 buildings (77 with residents, 1,851 residents) are left out. Data: (4) REACHOUT provides no 25-year map for the planned scenario under the median future rainfall; that case is left out; (5) the layout of the measures is not published, so where they act is inferred from where the flood maps change.",
+        "keywordSelection": [
+          {
+            "uri": "http://www.wikidata.org/entity/Q2421934",
+            "label": "nature-based solutions"
+          },
+          {
+            "uri": "http://www.wikidata.org/entity/Q3427027",
+            "label": "green infrastructure"
+          },
+          {
+            "uri": "http://www.wikidata.org/entity/Q2897115",
+            "label": "Sustainable urban drainage system"
+          },
+          {
+            "uri": "http://www.wikidata.org/entity/Q15909735",
+            "label": "urban flooding"
+          },
+          {
+            "uri": "http://www.wikidata.org/entity/Q2288778",
+            "label": "flood risk"
+          },
+          {
+            "uri": "http://www.wikidata.org/entity/Q14325",
+            "label": "Logroño"
+          }
+        ],
+        "disciplineSelection": {
+          "uri": "http://www.wikidata.org/entity/Q42250",
+          "label": "hydrology"
+        }
       },
       "provenance": {
-        "study": "derived (<org>-<repo>-<step>)"
+        "study": "nanopubs/drafts/04_study.md",
+        "label": "nanopubs/drafts/04_study.md",
+        "type": "nanopubs/drafts/04_study.md",
+        "scope": "nanopubs/drafts/04_study.md",
+        "methodology": "nanopubs/drafts/04_study.md",
+        "deviation": "nanopubs/drafts/04_study.md",
+        "keywordSelection": "nanopubs/drafts/04_study.md + Wikidata",
+        "disciplineSelection": "nanopubs/drafts/04_study.md + Wikidata"
       },
       "manual": [
         "type"
@@ -80,12 +160,24 @@
       "template_key": "FORRT_REPLICATION_OUTCOME",
       "template_uri": "https://w3id.org/np/RA2zljn0Nw9SadppOyxZoh-_Rxosslrq-vYG-p9SttnJE",
       "prefill": {
-        "outcome": "annefou-logrono-planned-nbs-flood-risk-outcome",
-        "date": "2026-10-11"
+        "outcome": "logrono-planned-nbs-flood-risk-outcome",
+        "label": "REACHOUT's planned nature-based solutions reduce residents at pluvial flood risk in Logroño by less than 4 %, only for frequent storms",
+        "date": "2026-10-11",
+        "validationStatus": "https://w3id.org/sciencelive/o/terms/Validated",
+        "conclusion": "Validated. In Logroño (Spain), the nature-based solutions of REACHOUT's planned scenario reduce the number of residents in buildings at pluvial flood risk only a little and only for frequent storms: by at most 1.7 % without the extra ponds and 3.7 % with them, and not at all during the 100- and 200-year storms, under present or future rainfall. The planned scenario without ponds stops reducing risk after the 10-year storm, the version with ponds after the 50-year storm. Neither ever increases the number of residents at risk. The measures change the flood maps over a few hectares in the south of the city, while future rainfall adds tens to over a hundred hectares of deeper water (see the future-rainfall chain), so in this model the planned measures do not offset climate change. This describes the measures as REACHOUT modelled them, as infiltration and storage in a fill-and-spill model without sewers; it is not an assessment of the measures as they may be built.",
+        "evidence": "Residents in buildings at risk (either risk index above zero), reduction against the current green cover under the same rainfall: planned scenario, 446 residents (1.7 %) for the 2-year storm with present rainfall, at most 0.8 % under future rainfall, none from the 25-year storm on (present) or the 10-year storm on (90th percentile); planned scenario with ponds, 640 (2.5 %), 405 (1.4 %) and 746 (2.3 %) residents for the 2-, 5- and 10-year storms with present rainfall, at most 1,001 residents (3.7 %) for the 2-year storm under the median future rainfall, 43 residents (0.1 %) for the 50-year storm, none for the 100- and 200-year storms. 123 cases checked (2 scenarios x 3 climates x 7 return periods x 3 risk measures, one map missing); no increase in any. Present rainfall: residential buildings whose hazard changes at all, 0-6 (planned) and 5-19 (with ponds) per return period and risk; flood-map cells changing by more than 1 cm, 0.06-9.1 ha (planned) and 7.6-12.5 ha (with ponds); stored water -66 to -8,380 m3 (planned) and -12,419 to +14,512 m3 (with ponds, which store more water from the 25-year storm on). Recorded impact places, 100-year storm, mean depth within 5 m: under the planned scenario it changes by at most 0.01 m at all 13 places; under the version with ponds it rises on the LO-20 ring road (0.19 to 0.26 m) and on the sunken LO-20 below the calle Chile roundabout (0.04 to 1.76 m), where a nearby terrain hollow drains, and changes by at most 0.01 m elsewhere. Figure: figures/main_result.png; checks: results/claim_test.json.",
+        "confidenceLevel": "https://w3id.org/sciencelive/o/terms/Moderate",
+        "limitations": "The measures are those of REACHOUT's planned scenario, modelled by REACHOUT: SaferRAIN represents them as infiltration and, for the ponds, as terrain changes, on 15-minute design storms, without sewers and without the dynamics of storage, overflow or clogging. A model of this kind is likely to understate what storage can do and cannot show what drainage design adds, so a small effect here is partly a property of the model. REACHOUT does not publish the layout of the measures; where they act is inferred from the changed flood maps, and the change at the LO-20 underpass under the version with ponds may be intended or an artefact of the terrain edit. One map (25-year storm, median future rainfall, planned scenario) is missing. The city's own plans, which may differ from REACHOUT's scenario, are not assessed. Risk counts residents only (fixed at 2021) and uses unvalidated census-section vulnerability; benefits for roads, businesses or public spaces are not counted."
       },
       "provenance": {
-        "outcome": "derived (<org>-<repo>-<step>)",
-        "date": "CITATION.cff"
+        "outcome": "nanopubs/drafts/05_outcome.md",
+        "label": "nanopubs/drafts/05_outcome.md",
+        "date": "CITATION.cff",
+        "validationStatus": "nanopubs/drafts/05_outcome.md",
+        "conclusion": "nanopubs/drafts/05_outcome.md",
+        "evidence": "nanopubs/drafts/05_outcome.md",
+        "confidenceLevel": "nanopubs/drafts/05_outcome.md",
+        "limitations": "nanopubs/drafts/05_outcome.md"
       },
       "manual": [
         "validationStatus",
@@ -100,12 +192,29 @@
       "prefill": {
         "st02": [
           {
+            "cites": "http://purl.org/spar/cito/usesMethodIn",
             "cited": "https://doi.org/10.5194/nhess-26-2765-2026"
+          },
+          {
+            "cites": "http://purl.org/spar/cito/usesMethodIn",
+            "cited": "https://doi.org/10.5281/zenodo.23285504"
+          },
+          {
+            "cites": "http://purl.org/spar/cito/usesConclusionsFrom",
+            "cited": "https://w3id.org/sciencelive/np/RAzO2FoYqdwvPCDDkfVmf-SKOl2mUpsf_qZeje0i_LP_U"
+          },
+          {
+            "cites": "http://purl.org/spar/cito/usesDataFrom",
+            "cited": "https://doi.org/10.5281/zenodo.23298913"
+          },
+          {
+            "cites": "http://purl.org/spar/cito/usesDataFrom",
+            "cited": "https://doi.org/10.5281/zenodo.14035876"
           }
         ]
       },
       "provenance": {
-        "st02": "cites = validation status (see 05_outcome); cited = CITATION.cff references[article]"
+        "st02": "cites = nanopubs/drafts/06_citation.md; cited = CITATION.cff references[article]; further rows = nanopubs/drafts/06_citation.md"
       },
       "published_uri": null
     }
