@@ -1,9 +1,7 @@
-# Snakefile — orchestrates the replication pipeline end-to-end.
+# Snakefile — orchestrates the pipeline end-to-end.
 #
-# Replace the placeholder rules with your actual replication steps. The
-# canonical pattern is one rule per pipeline stage, and each rule wraps a
-# notebook executed via jupytext (so the notebook stays the source of truth
-# and the Snakefile just sequences them).
+# Each rule wraps a notebook executed via jupytext. Inputs are files that are never
+# committed (data/), so a fresh checkout always starts from the download.
 #
 # Usage:
 #   snakemake --cores 1                  # run everything
@@ -17,47 +15,55 @@ FIGURES = "figures"
 
 rule all:
     input:
-        # Replace with your actual final artefacts:
         f"{FIGURES}/main_result.png",
-        f"{RESULTS}/summary.csv",
+        f"{RESULTS}/claim_test.json",
 
 
-# ---------- 01: Data download ----------
-# Every replication MUST be self-contained: data is downloaded by the notebook,
-# never assumed to exist locally. See CLAUDE.md § Self-contained data.
+# ---------- 01: the analysis release and the REACHOUT archive (Zenodo) ----------
 rule data_download:
     output:
-        f"{DATA}/raw/dataset.zip",
+        f"{DATA}/raw/sources.json",
     log:
         f"{RESULTS}/logs/01_data_download.log",
     shell:
         f"cd {{NOTEBOOKS}} && jupytext --to notebook --execute 01_data_download.py 2>&1 | tee ../{{log}}"
 
 
-# ---------- 02: Data clean ----------
+# ---------- 02: the inputs of this finding ----------
 rule data_clean:
     input:
-        f"{DATA}/raw/dataset.zip",
+        f"{DATA}/raw/sources.json",
     output:
-        f"{DATA}/clean/dataset.parquet",
+        f"{DATA}/clean/at_risk.csv",
+        f"{DATA}/clean/hazard_changed.csv",
+        f"{DATA}/clean/cells.csv",
+        f"{DATA}/clean/places.csv",
     shell:
         f"cd {{NOTEBOOKS}} && jupytext --to notebook --execute 02_data_clean.py"
 
 
-# ---------- 03: Analysis ----------
+# ---------- 03: the finding ----------
 rule analysis:
     input:
-        f"{DATA}/clean/dataset.parquet",
+        f"{DATA}/clean/at_risk.csv",
+        f"{DATA}/clean/hazard_changed.csv",
+        f"{DATA}/clean/cells.csv",
+        f"{DATA}/clean/places.csv",
     output:
-        f"{RESULTS}/summary.csv",
+        f"{RESULTS}/claim_test.json",
+        f"{RESULTS}/residents_at_risk_reduction.csv",
+        f"{RESULTS}/buildings_hazard_changed.csv",
+        f"{RESULTS}/flood_map_changes.csv",
+        f"{RESULTS}/impact_places_depth.csv",
     shell:
         f"cd {{NOTEBOOKS}} && jupytext --to notebook --execute 03_analysis.py"
 
 
-# ---------- 04: Figures ----------
+# ---------- 04: figures ----------
 rule figures:
     input:
-        f"{RESULTS}/summary.csv",
+        f"{DATA}/raw/sources.json",
+        f"{RESULTS}/residents_at_risk_reduction.csv",
     output:
         f"{FIGURES}/main_result.png",
     shell:

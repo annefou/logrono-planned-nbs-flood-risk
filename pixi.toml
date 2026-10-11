@@ -33,6 +33,12 @@ nbclient = "*"
 ipykernel = "*"
 # --- pipeline driver ---
 snakemake = "*"
+# --- this chain ---
+requests = "*"             # the analysis release and REACHOUT archive from Zenodo
+rasterio = "*"             # REACHOUT depth rasters, read in place
+pyproj = "*"               # EPSG:32632 -> EPSG:3857 for the map
+contextily = "*"           # basemap tiles (context only)
+xyzservices = "*"          # tile provider definitions
 # --- replace/extend with the deps your replication needs ---
 # Examples (uncomment as needed):
 # statsmodels = "*"          # GLM/GLMM regression

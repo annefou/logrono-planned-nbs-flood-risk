@@ -1,0 +1,32 @@
+{
+  "aida": "The nature-based solutions of REACHOUT's planned scenario for Logroño reduce the number of residents in buildings at pluvial flood risk by less than 4 %, with no reduction during the 100- and 200-year storms.",
+  "max_reduction_pct": 3.710594202977824,
+  "max_reduction_residents": 1001.458651751469,
+  "reduction_below_4pct_everywhere": true,
+  "no_reduction_for_100_and_200_year_storms": true,
+  "never_an_increase": true,
+  "return_periods_with_any_reduction": {
+    "NBSplanned": [
+      2,
+      5,
+      10
+    ],
+    "NBSplanned_plus": [
+      2,
+      5,
+      10,
+      25,
+      50
+    ]
+  },
+  "cases_checked": 123,
+  "maps_not_available": [
+    {
+      "land_cover": "NBSplanned",
+      "climate": "CC_Q50",
+      "rp": 25,
+      "status": "missing"
+    }
+  ],
+  "holds": true
+}
