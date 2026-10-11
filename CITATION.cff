@@ -3,10 +3,10 @@ title: "REACHOUT's planned nature-based solutions and building-level pluvial flo
 message: "If you use this software, please cite it as below."
 type: software
 authors:
-  - family-names: "Fouilloux"
-    given-names: "Anne"
-    orcid: "https://orcid.org/0000-0002-1784-2920"
-    affiliation: "LifeWatch ERIC"
+- family-names: "Fouilloux"
+  given-names: "Anne"
+  orcid: "https://orcid.org/0000-0002-1784-2920"
+  affiliation: "LifeWatch ERIC"
 repository-code: "https://github.com/annefou/logrono-planned-nbs-flood-risk"
 license: MIT
 version: "0.1.0"
@@ -29,81 +29,84 @@ abstract: >-
 # named was gone and "edit by hand" was the only path left. Two repos built from
 # this template then recorded the version DOI two different ways — one a
 # structured identifier, one a prose comment. Hence the automation.)
-doi: "{{ZENODO_DOI}}"
+doi: "10.5281/zenodo.23300574"
 identifiers:
-  - type: doi
-    value: "{{ZENODO_DOI}}"
-    description: "Concept DOI (resolves to the latest version) — cite the project"
-  # On release, the workflow adds:
-  #   - type: doi   value: <version DOI>  "Version DOI for vX.Y.Z — pins this exact release; cite this from nanopubs"
-  #   - type: swh   value: swh:1:rev:<commit>;origin=<repo>  "Software Heritage ID of the vX.Y.Z source tree"
+- type: doi
+  value: 10.5281/zenodo.23300574
+  description: Concept DOI (resolves to the latest version) — cite the project
+- type: doi
+  value: 10.5281/zenodo.23300575
+  description: Version DOI for v0.1.0 — pins this exact release; cite this from nanopubs
+- type: swh
+  value: swh:1:rev:bf486cc6ab5f1719d8ee6ea142299c885679472e;origin=https://github.com/annefou/logrono-planned-nbs-flood-risk
+  description: Software Heritage ID of the v0.1.0 source tree
 keywords:
-  - pluvial flooding
-  - flood risk
-  - nature-based solutions
-  - green infrastructure
-  - climate change adaptation
-  - Logroño
-  - FORRT
-  - nanopublication
-  - Science-Live
+- pluvial flooding
+- flood risk
+- nature-based solutions
+- green infrastructure
+- climate change adaptation
+- Logroño
+- FORRT
+- nanopublication
+- Science-Live
 references:
-  - type: article
-    title: "A high-resolution framework for urban pluvial flood risk mapping"
-    authors:
-      - family-names: "Vogelbacher"
-        given-names: "Anastasia"
-      - family-names: "von Szombathely"
-        given-names: "Malte"
-      - family-names: "Lennartz"
-        given-names: "Marc"
-      - family-names: "Poschlod"
-        given-names: "Benjamin"
-      - family-names: "Sillmann"
-        given-names: "Jana"
-    journal: "Natural Hazards and Earth System Sciences"
-    volume: 26
-    start: 2765
-    end: 2783
-    year: "2026"
-    doi: "10.5194/nhess-26-2765-2026"
-  - type: software
-    title: "Building-level pluvial flood risk in Logroño under future rainfall and nature-based solution scenarios"
-    authors:
-      - family-names: "Fouilloux"
-        given-names: "Anne"
-    version: "v0.1.0"
-    year: "2026"
-    doi: "10.5281/zenodo.23298913"
-    notes: "The shared analysis whose result tables this repository uses (notebooks/01_data_download.py)."
-  - type: software
-    title: "Logroño replication of Vogelbacher et al. (2026): building-level pluvial flood risk with open data, tested against recorded flood impacts"
-    authors:
-      - family-names: "Fouilloux"
-        given-names: "Anne"
-    version: "v0.1.1"
-    year: "2026"
-    doi: "10.5281/zenodo.23285198"
-  - type: software
-    title: "building-climate-risk: building-level climate risk (flood, and other hazards)"
-    authors:
-      - family-names: "Fouilloux"
-        given-names: "Anne"
-    version: "v0.2.1"
-    year: "2026"
-    doi: "10.5281/zenodo.23285504"
-  - type: dataset
-    title: "Urban pluvial flood maps under different green cover scenarios"
-    authors:
-      - family-names: "Staccione"
-        given-names: "Andrea"
-      - family-names: "Pal"
-        given-names: "Jeremy S."
-    year: "2024"
-    doi: "10.5281/zenodo.14035876"
+- type: article
+  title: "A high-resolution framework for urban pluvial flood risk mapping"
+  authors:
+  - family-names: "Vogelbacher"
+    given-names: "Anastasia"
+  - family-names: "von Szombathely"
+    given-names: "Malte"
+  - family-names: "Lennartz"
+    given-names: "Marc"
+  - family-names: "Poschlod"
+    given-names: "Benjamin"
+  - family-names: "Sillmann"
+    given-names: "Jana"
+  journal: "Natural Hazards and Earth System Sciences"
+  volume: 26
+  start: 2765
+  end: 2783
+  year: "2026"
+  doi: "10.5194/nhess-26-2765-2026"
+- type: software
+  title: "Building-level pluvial flood risk in Logroño under future rainfall and nature-based solution scenarios"
+  authors:
+  - family-names: "Fouilloux"
+    given-names: "Anne"
+  version: "v0.1.0"
+  year: "2026"
+  doi: "10.5281/zenodo.23298913"
+  notes: "The shared analysis whose result tables this repository uses (notebooks/01_data_download.py)."
+- type: software
+  title: "Logroño replication of Vogelbacher et al. (2026): building-level pluvial flood risk with open data, tested against recorded flood impacts"
+  authors:
+  - family-names: "Fouilloux"
+    given-names: "Anne"
+  version: "v0.1.1"
+  year: "2026"
+  doi: "10.5281/zenodo.23285198"
+- type: software
+  title: "building-climate-risk: building-level climate risk (flood, and other hazards)"
+  authors:
+  - family-names: "Fouilloux"
+    given-names: "Anne"
+  version: "v0.2.1"
+  year: "2026"
+  doi: "10.5281/zenodo.23285504"
+- type: dataset
+  title: "Urban pluvial flood maps under different green cover scenarios"
+  authors:
+  - family-names: "Staccione"
+    given-names: "Andrea"
+  - family-names: "Pal"
+    given-names: "Jeremy S."
+  year: "2024"
+  doi: "10.5281/zenodo.14035876"
   # The FORRT chain of the Logroño replication, on which this work builds
   # (persistent pointer; regenerate the local summary with /import-from-nanopub <URL>).
-  - type: generic
-    title: "Logroño pluvial-flood replication of Vogelbacher et al. (2026) — CiTO citation (partially supported; qualifies the paper, extends the Hamburg reproduction)"
-    url: "https://w3id.org/sciencelive/np/RAoFYugT7OVk5eoHuxKCO9HeqA08jMfSn7TeUxwZcbezE"
-    notes: "Apex CiTO citation of the replication chain this work builds on. Study area: geographic coverage nanopub https://w3id.org/sciencelive/np/RAzds1z9t2ac7XFvx_Hsv18__p5nUTNA0NHIsskSyLVPQ"
+- type: generic
+  title: "Logroño pluvial-flood replication of Vogelbacher et al. (2026) — CiTO citation (partially supported; qualifies the paper, extends the Hamburg reproduction)"
+  url: "https://w3id.org/sciencelive/np/RAoFYugT7OVk5eoHuxKCO9HeqA08jMfSn7TeUxwZcbezE"
+  notes: "Apex CiTO citation of the replication chain this work builds on. Study area: geographic coverage nanopub https://w3id.org/sciencelive/np/RAzds1z9t2ac7XFvx_Hsv18__p5nUTNA0NHIsskSyLVPQ"

@@ -4,7 +4,7 @@
 [![Jupyter Book](https://github.com/annefou/logrono-planned-nbs-flood-risk/actions/workflows/jupyter-book.yml/badge.svg)](https://annefou.github.io/logrono-planned-nbs-flood-risk/)
 [![Docker](https://github.com/annefou/logrono-planned-nbs-flood-risk/actions/workflows/docker.yml/badge.svg)](https://github.com/annefou/logrono-planned-nbs-flood-risk/pkgs/container/logrono-planned-nbs-flood-risk)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![DOI](https://zenodo.org/badge/DOI/{{ZENODO_DOI}}.svg)]({{ZENODO_DOI}})
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23300574.svg)](https://doi.org/10.5281/zenodo.23300574)
 [![FAIR4RS](https://img.shields.io/badge/FAIR4RS-conformant-brightgreen)](docs/fair4rs-checklist.md)
 [![FORRT](https://img.shields.io/badge/FORRT-chain-blue)](https://forrt.org/)
 [![Science Live](https://img.shields.io/badge/Science%20Live-nanopub%20chain-purple)](nanopubs/PUBLISHED.md)
@@ -44,6 +44,6 @@ Flood maps: Andrea Staccione, Jeremy S. Pal (REACHOUT, CC BY 4.0). Buildings: Di
 
 ## Citation
 
-Cite via [`CITATION.cff`](CITATION.cff) → DOI [{{ZENODO_DOI}}]({{ZENODO_DOI}}), with the analysis [10.5281/zenodo.23298913](https://doi.org/10.5281/zenodo.23298913) and the method paper [10.5194/nhess-26-2765-2026](https://doi.org/10.5194/nhess-26-2765-2026).
+Cite via [`CITATION.cff`](CITATION.cff) → DOI [10.5281/zenodo.23300574](https://doi.org/10.5281/zenodo.23300574), with the analysis [10.5281/zenodo.23298913](https://doi.org/10.5281/zenodo.23298913) and the method paper [10.5194/nhess-26-2765-2026](https://doi.org/10.5194/nhess-26-2765-2026).
 
 Created from [`sciencelivehub/forrt-replication-template`](https://github.com/sciencelivehub/forrt-replication-template); see [`CLAUDE.md`](CLAUDE.md).

@@ -8,4 +8,4 @@
 
 The notebooks: (1) the analysis release and the REACHOUT maps, (2) the inputs of this finding, (3) the finding in every case, (4) the figure. The chain is listed in [`nanopubs/PUBLISHED.md`](nanopubs/PUBLISHED.md) once published.
 
-Cite via [`CITATION.cff`](CITATION.cff) → DOI [{{ZENODO_DOI}}]({{ZENODO_DOI}}).
+Cite via [`CITATION.cff`](CITATION.cff) → DOI [10.5281/zenodo.23300574](https://doi.org/10.5281/zenodo.23300574).
