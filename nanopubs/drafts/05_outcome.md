@@ -59,7 +59,7 @@ https://doi.org/{{ZENODO_VERSION_DOI}}
 ### Choose completion date (text input, required)
 
 ```
-2026-10-11
+2026-10-10
 ```
 
 <!-- field: validationStatus -->

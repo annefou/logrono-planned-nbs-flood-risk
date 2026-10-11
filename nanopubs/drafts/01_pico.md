@@ -19,7 +19,7 @@
 Slug becomes part of the nanopub URI. Use kebab-case.
 
 ```
-
+logrono-planned-nbs-flood-risk
 ```
 
 <!-- field: label -->
@@ -28,7 +28,7 @@ Slug becomes part of the nanopub URI. Use kebab-case.
 10-200 characters. Length-bounded.
 
 ```
-
+Do Logroño's planned nature-based solutions reduce building-level pluvial flood risk?
 ```
 
 <!-- field: description -->
@@ -37,7 +37,7 @@ Slug becomes part of the nanopub URI. Use kebab-case.
 One coherent sentence/paragraph that names P, I, C, O inline.
 
 ```
-
+In Logroño (Spain), compared with the current green cover, do the nature-based solutions planned by the city (bioswales, ponds, rain gardens and a green corridor) reduce building-level pluvial flood hazard and the number of residents in buildings at risk, under present and future design rainfall?
 ```
 
 <!-- field: type -->
@@ -45,7 +45,7 @@ One coherent sentence/paragraph that names P, I, C, O inline.
 
 - [ ] causation research question - (Does factor X cause outcome Y?)
 - [ ] descriptive research question - (What are the characteristics of X?)
-- [ ] effectiveness research question - (Does approach X work better than Y?)
+- [x] effectiveness research question - (Does approach X work better than Y?)
 - [ ] experience research question - (How do people experience phenomenon X?)
 - [ ] prediction research question - (What outcomes can we expect from X?)
 
@@ -55,7 +55,7 @@ One coherent sentence/paragraph that names P, I, C, O inline.
 Who/what is being studied. Discipline-level concept — not implementation. See `docs/pico-study-outcome-levels.md`.
 
 ```
-
+Residential buildings and their residents in Logroño (La Rioja, Spain), a mid-sized city exposed to pluvial flooding from short, intense rainstorms.
 ```
 
 <!-- field: interventionGroupDescription -->
@@ -64,7 +64,7 @@ Who/what is being studied. Discipline-level concept — not implementation. See 
 The intervention or exposure being examined. Discipline-level concept.
 
 ```
-
+The nature-based solutions planned for the city through a co-design process: bioswales and ponds, a green corridor, and additional small ponds and rain gardens.
 ```
 
 <!-- field: comparatorGroupDescription -->
@@ -73,7 +73,7 @@ The intervention or exposure being examined. Discipline-level concept.
 The comparison or control condition. Discipline-level concept.
 
 ```
-
+The city's current green cover, under the same design rainfall.
 ```
 
 <!-- field: outcomeGroupDescription -->
@@ -82,7 +82,7 @@ The comparison or control condition. Discipline-level concept.
 What outcomes are being measured. The kind of measurement, not the value.
 
 ```
-
+Building-level pluvial flood hazard around each residential building, and building-level pluvial flood risk: the number of residents in buildings at risk.
 ```
 
 ## Publication note
